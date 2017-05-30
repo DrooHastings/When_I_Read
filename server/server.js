@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 //static files
-app.use(express.static('client/public'));
+app.use(express.static('public'));
 
 //routes post-auth go here
 app.use('/', indexRouter);

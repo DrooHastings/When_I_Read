@@ -6,6 +6,6 @@ let router = express.Router();
 
 
 router.get('/', function(req, res){
-  res.sendFile(path.resolve('client/public/index.html') );
+  res.sendFile(path.join(__dirname, '../../public/views/index.html'));
 });
 module.exports = router;
