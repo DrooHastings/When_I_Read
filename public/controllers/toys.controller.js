@@ -3,6 +3,7 @@ myApp.controller('ToyController', ['splitService', function(splitService){
 
 let vm = this;
 
+splitService.getToyWords(); //testing route
 vm.letterObjectArray= splitService.letterObjectArray;
 console.log('controller array:', vm.letterObjectArray);
 // take a word, break it down into individual letters
@@ -16,8 +17,7 @@ console.log('controller array:', vm.letterObjectArray);
 //should split function taking words apart, and assigning sounds into a service
 
 
-let exArray = ['DOLL'];
-splitService.splitArray(exArray);
+
 
 
 

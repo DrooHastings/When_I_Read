@@ -30,12 +30,14 @@ vm.getToyWords = function(){
   console.log('hit getToyWords');
   $http({
     method: 'GET',
-    url: 'getToys'
+    url: '/Toys'
   }).then(function(response){
-    log(response);
+    tempArray = response.data;
+    tempArray = tempArray[0];
+    let toyWords = tempArray.words;
+    vm.splitArray(toyWords);
     //set response as parameter for vm.splitArray
-
-  });
+});
 
 
 
