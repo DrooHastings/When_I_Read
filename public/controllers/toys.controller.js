@@ -3,7 +3,8 @@ myApp.controller('ToyController', ['splitService', function(splitService){
 
 let vm = this;
 
-vm.wordArray = [];
+vm.letterObjectArray= splitService.letterObjectArray;
+console.log('controller array:', vm.letterObjectArray);
 // take a word, break it down into individual letters
 // letter sounds could be a switch statement that checks the letter - although how would you do long and short?
 //each word could be an array of objects
@@ -15,7 +16,7 @@ vm.wordArray = [];
 //should split function taking words apart, and assigning sounds into a service
 
 
-let exArray = ['DOLL', 'GAME', 'BALL'];
+let exArray = ['DOLL'];
 splitService.splitArray(exArray);
 
 

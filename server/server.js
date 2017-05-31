@@ -8,6 +8,7 @@ let app = express ();
 
 //Routing Modules here (pre-auth)
 const indexRouter = require('./routes/index');
+// const toysRouter = require('./routes/toys');
 
 //bodyParser
 app.use(bodyParser.json());
@@ -18,6 +19,13 @@ app.use(express.static('public'));
 
 //routes post-auth go here
 app.use('/', indexRouter);
+// app.use('/getToys', toysRouter);
+
+//split out into it's own module later
+app.get('/getToys', function(req, res){
+  
+
+});
 
 
 //spin up server
