@@ -1,1 +1,22 @@
 <h1>Toys Test</h1>
+<!-- <div class="flex-wrapper">
+      <div class="one">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <h2 class="animated infinite jello">D</h2>
+            <p>This will make a 'D' sound.</p>
+          </div>
+        </div>
+      </div>
+</div> -->
+
+<div ng-repeat='item in TC.wordArray' class="flex-wrapper">
+  <div class="one"></div>
+  <!-- need a background image somehow -->
+    <div class="overlay">
+      <div class="overlay-inner">
+        <h2 class="animated infinite jello">{{item.letter}}</h2>
+          <p>This will make a {{item.sound}} sound</p>
+      </div>
+    </div>
+</div>
