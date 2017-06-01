@@ -11,12 +11,18 @@
 </div> -->
 
 <div ng-repeat='item in TC.letterObjectArray' class="flex-wrapper">
-  <div class="one"></div>
-  <!-- need a background image somehow -->
+  <a href="" class="one">
+    <!-- need a background image somehow -->
     <div class="overlay">
       <div class="overlay-inner">
         <h2 class="animated infinite jello">{{item.letter}}</h2>
           <p>This will make a {{item.sound}} sound</p>
       </div>
     </div>
+  </a>
+
+
+</div>
+<div class="button-wrapper">
+  <button ng-click='TC.nextClick()' type="button" name="button">Next Word</button>
 </div>
