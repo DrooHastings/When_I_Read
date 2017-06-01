@@ -37,20 +37,23 @@ vm.splitArray = function(array){
        sound: ' '
        };
       //  console.log('letterObject', letterObject);
+
     vm.letterObjectArray.push(letterObject);
     console.log('letterObjectArray', vm.letterObjectArray);
   }//end for
 };
 
 vm.getToyWords = function(){
-  // console.log('hit getToyWords');
+  console.log('hit getToyWords');
   // vm.letterObjectArray =[];
 
   $http({
     method: 'GET',
     url: '/Toys'
   }).then(function(response){
+    console.log('response.data', response.data);
     tempArray = response.data;
+
 
     tempArray = tempArray[0];
     console.log('tempArray', tempArray);

@@ -4,8 +4,9 @@ myApp.controller('ToyController', ['splitService', function(splitService){
 let vm = this;
 
  //testing route
-vm.counter=splitService.counter;
-vm.letterObjectArray= splitService.letterObjectArray;
+
+
+// vm.letterObjectArray = [];
 
 vm.nextClick = function (){
   console.log('clicked next');
@@ -13,6 +14,8 @@ vm.nextClick = function (){
   splitService.getToyWords();
   // vm.letterObjectArray = [];
 };
+
+
 
 // take a word, break it down into individual letters
 // letter sounds could be a switch statement that checks the letter - although how would you do long and short?

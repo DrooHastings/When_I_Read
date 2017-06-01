@@ -1,28 +1,19 @@
 <h1>Toys Test</h1>
-<!-- <div class="flex-wrapper">
-      <div class="one">
-        <div class="overlay">
-          <div class="overlay-inner">
-            <h2 class="animated infinite jello">D</h2>
-            <p>This will make a 'D' sound.</p>
-          </div>
-        </div>
-      </div>
-</div> -->
 
-<div ng-repeat='item in TC.letterObjectArray' class="flex-wrapper">
-  <a href="" class="one">
+<div class="flex-wrapper">
+   <a ng-repeat='array in TC.letterObjectArray' href="" class="one">
     <!-- need a background image somehow -->
     <div class="overlay">
       <div class="overlay-inner">
-        <h2 class="animated infinite jello">{{item.letter}}</h2>
-          <p>This will make a {{item.sound}} sound</p>
+        <h2 class="animated infinite jello">{{array.letter}}</h2>
+          <p>This will make a {{array.sound}} sound</p>
       </div>
     </div>
   </a>
-
-
 </div>
+
+
+
 <div class="button-wrapper">
   <button ng-click='TC.nextClick()' type="button" name="button">Next Word</button>
 </div>
