@@ -6,10 +6,15 @@ vm.toyLetters = splitService.letterObjectArray;
 
 splitService.getToyWords();
 vm.toyClick = function(){
-  
+  vm.toyLetters =[];
   console.log('Array at click!!!', vm.toyLetters);
-  splitService.toyClick();
+  splitService.counter = splitService.counter +1;
+  splitService.boston();
+  splitService.splitArray(splitService.toysArray[splitService.counter]);
   vm.toyLetters = splitService.letterObjectArray;
+  console.log('vm.toyLetters', vm.toyLetters);
+
+  // vm.toyLetters = splitService.letterObjectArray;
 };
 
 

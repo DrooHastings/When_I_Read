@@ -1,20 +1,21 @@
 myApp.service('splitService',['$http', function ($http){
   let vm = this;
 
-  var letterObjectArray = [];
-  vm.letterObjectArray = letterObjectArray;
+  // var letterObjectArray = [];
+  vm.letterObjectArray = [];
   vm.counter = 0;
   vm.toysArray = [];
 
-  vm.toyClick = function () {
-    console.log('toy click in service');
-    vm.counter = vm.counter + 1;
-    // letterObjectArray = [];
-    // vm.getToyWords();
-    console.log('counter',vm.counter);
-  };
+  // vm.toyClick = function () {
+  //   console.log('toy click in service');
+  //   vm.counter = vm.counter + 1;
+  //   // letterObjectArray = [];
+  //   // vm.getToyWords();
+  //   console.log('counter',vm.counter);
+  // };
 
  vm.splitArray = function(word){
+   vm.letterObjectArray =[];
    var arrayOfLetters = word.split('');
    console.log('arrayOfLetters', arrayOfLetters);
    for (var i = 0; i < arrayOfLetters.length; i++) {
@@ -23,9 +24,9 @@ myApp.service('splitService',['$http', function ($http){
         sound: ' '
         };
         console.log('letterObject', letterObject);
-        letterObjectArray.push(letterObject);
+        vm.letterObjectArray.push(letterObject);
     }//end for
-      console.log(letterObjectArray);
+      // console.log(letterObjectArray);
  };
 
 vm.getToyWords = function(){
@@ -42,11 +43,22 @@ vm.getToyWords = function(){
     vm.toysArray = vm.responseObj.words;
     console.log(vm.toysArray);
     console.log('counter in get func', vm.counter);
-    vm.splitArray(vm.toysArray[vm.counter]);
+    // vm.splitArray(vm.toysArray[vm.counter]);
+    vm.toysArray = vm.responseObj.words;
+    // vm.splitArray(vm.toysArray);
   });
-  return vm.toysArray;
+  // return vm.toysArray;
 };
 
+vm.boston = function (object){
+
+  console.log('reached boston with', vm.toysArray);
+  // vm.counter = vm.counter + 1;
+  console.log('counter isssss:', vm.counter);
+  console.log('toysArray incremented on click', vm.toysArray[vm.counter]);
+  // vm.splitArray(vm.toysArray[vm.counter]);
+
+};
 
 
 
