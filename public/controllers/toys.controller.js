@@ -2,9 +2,15 @@ myApp.controller('ToyController', ['splitService', function(splitService){
   console.log('made it to the ToysController');
 
 let vm = this;
-vm.letterObjectArray = splitService.letterObjectArray;
+vm.toyLetters = splitService.letterObjectArray;
+
 splitService.getToyWords();
-vm.toyClick = splitService.toyClick();
+vm.toyClick = function(){
+  
+  console.log('Array at click!!!', vm.toyLetters);
+  splitService.toyClick();
+  vm.toyLetters = splitService.letterObjectArray;
+};
 
 
  //testing route
@@ -12,12 +18,6 @@ vm.toyClick = splitService.toyClick();
 
 // vm.letterObjectArray = [];
 
-vm.toyClick = function (){
-  console.log('clicked next');
-
-
-  // vm.letterObjectArray = [];
-};
 
 
 
