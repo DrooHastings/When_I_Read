@@ -1,5 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+.btn {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: 'Poiret One', cursive;
+  font-size: 2em; }
+
+.btn-green {
+  background: #2ecc71; }
+  .btn-green:hover {
+    background: #26ab5f;
+    transition: all 0.3s ease; }
+  .btn-green:active {
+    background: #176437; }
+
+.btn-blue {
+  background: #3498db; }
+  .btn-blue:hover {
+    background: #2383c4;
+    transition: all 0.3s ease; }
+  .btn-blue:active {
+    background: #16527a; }
+
+.btn-yellow {
+  background: #f1c40f; }
+  .btn-yellow:hover {
+    background: #cba50c;
+    transition: all 0.3s ease; }
+  .btn-yellow:active {
+    background: #796307; }
+
+.btn-red {
+  background: #e74c3c; }
+  .btn-red:hover {
+    background: #df2e1b;
+    transition: all 0.3s ease; }
+  .btn-red:active {
+    background: #921e12; }
+
 body {
-  font: normal 18px/1.5 "Helvetica Neue", sans-serif; }
+  font: normal 18px/1.5 "Helvetica Neue", sans-serif;
+  background-color: gray;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
 
 .flex-wrapper {
   display: flex;
@@ -20,13 +65,16 @@ body {
   background-image: url(https://indiabright.com/wp-content/uploads/2015/12/Cute-Doll-Wallpapers-For-Facebook-Cover-Picture-12.jpg); }
 
 .one:nth-of-type(2) {
-  background-image: url(http://sportstradinglife.com/wp-content/uploads/2015/03/msot-profitable-betfair-sport-to-trade-276x300.jpg); }
+  background-image: url(https://sg.kidlander.com/wp-content/uploads/2013/01/Board-Games-Cafes-in-Singapore.jpg); }
 
 .one:nth-of-type(3) {
   background-image: url(https://i1.wp.com/www.photo-geeks.com/wp-content/uploads/2015/08/volkswagen-beetle-red-toy-car-macro-close-up.jpg); }
 
 .one:nth-of-type(4) {
   background-image: url(http://lh3.ggpht.com/Yn_JxkSqGYbtByLBIN6ywm1DNIFhJgn7hjPQnNJrpc63MvDTeFCG8YpKDOKY8FakTujoTJX6ll04DYgOCnrQCuo=s300-c); }
+
+.one:nth-of-type(5) {
+  background-image: url(http://68.media.tumblr.com/006e00f7b69429d3c1b9caaecf678a7d/tumblr_nweq4glmRE1sj6o1eo1_1280.jpg); }
 
 .flex-wrapper a:hover {
   flex: 3; }

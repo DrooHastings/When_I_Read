@@ -10,6 +10,7 @@ let app = express ();
 //Routing Modules here (pre-auth)
 const indexRouter = require('./routes/index');
 const toysRouter = require('./routes/toys');
+const animalsRouter = require ('./routes/animals');
 
 //bodyParser
 app.use(bodyParser.json());
@@ -32,6 +33,7 @@ app.use(express.static('public'));
 //routes post-auth go here
 app.use('/', indexRouter);
 app.use('/Toys', toysRouter);
+app.use('/Animals', animalsRouter);
 
 //split out into it's own module later
 app.get('/getToys', function(req, res){

@@ -51,21 +51,30 @@ vm.getToyWords = function(){
   // return vm.toysArray;
 };
 
-// vm.boston = function (object){
-//
-//   console.log('reached boston with', vm.toysArray);
-//   // vm.counter = vm.counter + 1;
-//   console.log('counter isssss:', vm.counter);
-//   console.log('toysArray incremented on click', vm.toysArray[vm.counter]);
-//   // vm.splitArray(vm.toysArray[vm.counter]);
-//
-// };
+vm.getAnimals = function(){
+  console.log('hit getAnimals');
+  // vm.letterObjectArray =[];
+
+  $http({
+    method: 'GET',
+    url: '/Animals'
+  }).then(function(response){
+    console.log('response.data', response.data[0]);
+    vm.responseObj = response.data[0];
+    console.log('vm.responseObj.words',vm.responseObj.words);
+    vm.toysArray = vm.responseObj.words;
+    console.log(vm.toysArray);
+    console.log('counter in get func', vm.counter);
+
+    // vm.toysArray = vm.responseObj.words;
+    // vm.splitArray(vm.toysArray[vm.counter]);
+    // vm.splitArray(vm.toysArray);
+  });
+  // return vm.toysArray;
+};
+
+
 
 
 
 }]);
-
-//on button click icrement counter
-// attach a function call to ng-repeat?
-//toyWords[counter] should be saved to variable that is being ng-repeated in
-// toys.html
