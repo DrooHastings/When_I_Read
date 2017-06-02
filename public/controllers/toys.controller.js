@@ -1,18 +1,41 @@
 myApp.controller('ToyController', ['splitService', function(splitService){
   console.log('made it to the ToysController');
+  let vm = this;
 
-let vm = this;
-vm.toyLetters = splitService.letterObjectArray;
 
-splitService.getToyWords();
+
+  splitService.getToyWords();
+
+
+
+  vm.toyLetters = splitService.letterObjectArray;
+// splitService.getToyWords();
 vm.toyClick = function(){
   vm.toyLetters =[];
   console.log('Array at click!!!', vm.toyLetters);
   splitService.counter = splitService.counter +1;
-  splitService.boston();
-  splitService.splitArray(splitService.toysArray[splitService.counter]);
-  vm.toyLetters = splitService.letterObjectArray;
-  console.log('vm.toyLetters', vm.toyLetters);
+  // splitService.boston();
+
+  if (splitService.counter < splitService.toysArray.length) {
+    console.log('LESS THAN');
+    splitService.splitArray(splitService.toysArray[splitService.counter]);
+    vm.toyLetters = splitService.letterObjectArray;
+  } else {
+    splitService.counter = 0;
+    splitService.splitArray(splitService.toysArray[splitService.counter]);
+    vm.toyLetters = splitService.letterObjectArray;
+
+  }
+  // splitService.splitArray(splitService.toysArray[splitService.counter]);
+  // vm.toyLetters = splitService.letterObjectArray;
+  // console.log('vm.toyLetters', vm.toyLetters);
+
+
+
+  //
+  // splitService.splitArray(splitService.toysArray[splitService.counter]);
+  // vm.toyLetters = splitService.letterObjectArray;
+  // console.log('vm.toyLetters', vm.toyLetters);
 
   // vm.toyLetters = splitService.letterObjectArray;
 };
