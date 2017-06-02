@@ -19,10 +19,25 @@ body {
   background-repeat: no-repeat;
   transition: flex .4s;
 }
+$Doll: url(https://indiabright.com/wp-content/uploads/2015/12/Cute-Doll-Wallpapers-For-Facebook-Cover-Picture-12.jpg);
+$Ball: url(http://sportstradinglife.com/wp-content/uploads/2015/03/msot-profitable-betfair-sport-to-trade-276x300.jpg);
+$Car: url(https://i1.wp.com/www.photo-geeks.com/wp-content/uploads/2015/08/volkswagen-beetle-red-toy-car-macro-close-up.jpg);
+$Teddy: url(http://lh3.ggpht.com/Yn_JxkSqGYbtByLBIN6ywm1DNIFhJgn7hjPQnNJrpc63MvDTeFCG8YpKDOKY8FakTujoTJX6ll04DYgOCnrQCuo=s300-c);
+
+
+$social-colours: $Doll, $Ball, $Car, $Teddy;
+
+@for $i from 1 through length($social-colours) {
+  .one:nth-of-type(#{$i}) {
+    background-image:  nth($social-colours, $i);
+  }
+}
+
+
 
 .flex-wrapper .one {
   // background-image: url(https://indiabright.com/wp-content/uploads/2015/12/Cute-Doll-Wallpapers-For-Facebook-Cover-Picture-12.jpg);
-  background-color: red;
+  // background-color: red;
 }
 
 .flex-wrapper a:hover {
