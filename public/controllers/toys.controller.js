@@ -2,16 +2,20 @@ myApp.controller('ToyController', ['splitService', function(splitService){
   console.log('made it to the ToysController');
 
 let vm = this;
+vm.letterObjectArray = splitService.letterObjectArray;
+splitService.getToyWords();
+vm.toyClick = splitService.toyClick();
+
 
  //testing route
 
 
 // vm.letterObjectArray = [];
 
-vm.nextClick = function (){
+vm.toyClick = function (){
   console.log('clicked next');
 
-  splitService.getToyWords();
+
   // vm.letterObjectArray = [];
 };
 
