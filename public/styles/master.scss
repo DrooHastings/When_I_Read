@@ -68,20 +68,41 @@ $Car: url(https://i1.wp.com/www.photo-geeks.com/wp-content/uploads/2015/08/volks
 $Teddy: url(http://lh3.ggpht.com/Yn_JxkSqGYbtByLBIN6ywm1DNIFhJgn7hjPQnNJrpc63MvDTeFCG8YpKDOKY8FakTujoTJX6ll04DYgOCnrQCuo=s300-c);
 $Disney: url(http://68.media.tumblr.com/006e00f7b69429d3c1b9caaecf678a7d/tumblr_nweq4glmRE1sj6o1eo1_1280.jpg);
 
-$social-colours: $Doll, $Ball, $Car, $Teddy, $Disney;
+$toy-bg: $Doll, $Ball, $Car, $Teddy, $Disney;
 
-@for $i from 1 through length($social-colours) {
+@for $i from 1 through length($toy-bg) {
   .one:nth-of-type(#{$i}) {
-    background-image:  nth($social-colours, $i);
+    background-image:  nth($toy-bg, $i);
+  }
+}
+
+$Cat: url(http://i.dailymail.co.uk/i/pix/2012/02/06/article-2097359-119B5B45000005DC-1_634x897.jpg);
+$Fish: url(https://68.media.tumblr.com/719c9a115cb6cc812698956a65215f37/tumblr_oh0wtddmAY1uhdqtfo1_500.jpg);
+$Bear: url(https://s3.amazonaws.com/assets.forward.com/images/cropped/teddy-1444648-1920-1486756010.jpg);
+$Duck: url(https://s-media-cache-ak0.pinimg.com/originals/8a/b2/14/8ab214bace1f872ce25840420a04f1fa.jpg);
+$Bunny: url(https://s-media-cache-ak0.pinimg.com/736x/7c/89/f3/7c89f39810a2f97887d1529665fce749.jpg);
+
+$animal-bg: $Bear, $Duck, $Bunny, $Cat;
+
+@for $i from 1 through length($animal-bg) {
+  .two:nth-of-type(#{$i}) {
+    background-image:  nth($animal-bg, $i);
   }
 }
 
 
-
 .flex-wrapper .one {
   // background-image: url(https://indiabright.com/wp-content/uploads/2015/12/Cute-Doll-Wallpapers-For-Facebook-Cover-Picture-12.jpg);
-  // background-color: red;
+  background-color: red;
 }
+
+.flex-wrapper .two {
+  // background-image: url(https://indiabright.com/wp-content/uploads/2015/12/Cute-Doll-Wallpapers-For-Facebook-Cover-Picture-12.jpg);
+  background-color: red;
+}
+
+
+
 
 .flex-wrapper a:hover {
   flex: 3;
@@ -149,4 +170,28 @@ $social-colours: $Doll, $Ball, $Car, $Teddy, $Disney;
     visibility: visible;
     transform: none;
   }
+}
+
+.dash-flex-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.dash-flex-wrapper .dash-logo{
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  background-image: url(http://images.clipartpanda.com/stack-of-childrens-books-clip-art-book-drive-for-children-NewspaperGraphic.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  height: 40vh;
+  width: 10vh;
+
+}
+
+.dash-flex-wrapper h4 {
+  display: flex;
+  align-items: flex-end;
+
 }

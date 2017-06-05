@@ -23,6 +23,7 @@ myApp.service('splitService',['$http', function ($http){
         letter: arrayOfLetters[i],
         sound: ' '
         };
+
         console.log('letterObject', letterObject);
         vm.letterObjectArray.push(letterObject);
     }//end for
@@ -66,9 +67,8 @@ vm.getAnimals = function(){
     console.log(vm.toysArray);
     console.log('counter in get func', vm.counter);
 
-    // vm.toysArray = vm.responseObj.words;
-    // vm.splitArray(vm.toysArray[vm.counter]);
-    // vm.splitArray(vm.toysArray);
+    vm.toysArray = vm.responseObj.words;
+    vm.splitArray(vm.toysArray[vm.counter]);
   });
   // return vm.toysArray;
 };
