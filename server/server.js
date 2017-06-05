@@ -11,6 +11,7 @@ let app = express ();
 const indexRouter = require('./routes/index');
 const toysRouter = require('./routes/toys');
 const animalsRouter = require ('./routes/animals');
+const soundsRouter = require ('./routes/sounds');
 
 //bodyParser
 app.use(bodyParser.json());
@@ -34,6 +35,7 @@ app.use(express.static('public'));
 app.use('/', indexRouter);
 app.use('/Toys', toysRouter);
 app.use('/Animals', animalsRouter);
+app.use('/Sounds', soundsRouter);
 
 //split out into it's own module later
 app.get('/getToys', function(req, res){

@@ -19,45 +19,10 @@ myApp.controller('ToyController', ['splitService', function(splitService){
       splitService.splitArray(splitService.toysArray[splitService.counter]);
       vm.toyLetters = splitService.letterObjectArray;
     }
-  // splitService.splitArray(splitService.toysArray[splitService.counter]);
-  // vm.toyLetters = splitService.letterObjectArray;
-  // console.log('vm.toyLetters', vm.toyLetters);
 
-
-
-  //
-  // splitService.splitArray(splitService.toysArray[splitService.counter]);
-  // vm.toyLetters = splitService.letterObjectArray;
-  // console.log('vm.toyLetters', vm.toyLetters);
-
-  // vm.toyLetters = splitService.letterObjectArray;
 };
 
 
- //testing route
 
-
-// vm.letterObjectArray = [];
-
-
-
-
-// take a word, break it down into individual letters
-// letter sounds could be a switch statement that checks the letter - although how would you do long and short?
-//each word could be an array of objects
-//each object contains a letter, and sound.
-
-//will also need an array of background images
-//how can I check to see how many images we need?  letterArray.length?
-
-//should split function taking words apart, and assigning sounds into a service
-
-
-
-
-
-
-// vm.splitArray(['DOLLS', 'GAME', 'BALL']);
-// vm.toWordObject(['D','O','L','L']);
 
 }]);

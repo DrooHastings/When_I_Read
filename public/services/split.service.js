@@ -14,26 +14,23 @@ myApp.service('splitService',['$http', function ($http){
   //   console.log('counter',vm.counter);
   // };
 
- vm.splitArray = function(word){
-   vm.letterObjectArray =[];
-   var arrayOfLetters = word.split('');
-   console.log('arrayOfLetters', arrayOfLetters);
-   for (var i = 0; i < arrayOfLetters.length; i++) {
-    var letterObject = {
-        letter: arrayOfLetters[i],
-        sound: ' '
-        };
+vm.splitArray = function(word){
+  vm.letterObjectArray =[];
+  var arrayOfLetters = word.split('');
+  console.log('arrayOfLetters', arrayOfLetters);
 
-        console.log('letterObject', letterObject);
-        vm.letterObjectArray.push(letterObject);
-    }//end for
-      // console.log(letterObjectArray);
- };
+  $http({
+    method: 'POST',
+    url: '/Sounds',
+    data: arrayOfLetters
+  }).then(function(response){
+    console.log('sounds response from server', response);
+    });
+  };
 
 vm.getToyWords = function(){
   console.log('hit getToyWords');
   // vm.letterObjectArray =[];
-
   $http({
     method: 'GET',
     url: '/Toys'
