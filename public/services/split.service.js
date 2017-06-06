@@ -24,7 +24,12 @@ vm.splitArray = function(word){
     url: '/Sounds',
     data: arrayOfLetters
   }).then(function(response){
-    console.log('sounds response from server', response);
+    console.log('sounds response from server', response.data);
+    for (var i = 0; i < response.data.length; i++) {
+      var letterObject = response.data[i];
+      vm.letterObjectArray.push(letterObject);
+    }
+    
     });
   };
 

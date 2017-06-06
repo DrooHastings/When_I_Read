@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @mixin button-bg($bg) {
   background: $bg;
@@ -16,7 +16,8 @@
  text-decoration:none;
  padding:5px 10px;
  border-radius:3px;
- font-family: 'Poiret One', cursive;
+ font-family: 'Roboto';
+ color: #f59221;
  font-size:2em;
 }
 
@@ -36,13 +37,48 @@
    @include button-bg(#e74c3c);
 }
 
+.btn-purple {
+    @include button-bg (#8f2a8b);
+}
+
 body {
-  font: normal 18px/1.5 "Helvetica Neue", sans-serif;
-  background-color: gray;
+  font: normal 18px/1.5 "Roboto", sans-serif;
+  background-color: #ffce6b;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  // linear-gradient(to right, pink , purple);
+}
+
+// link styling
+$linkColor: #8f2a8b;
+a {
+  color: $linkColor;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  &:before {
+    background-color: $linkColor;
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    width: 100%;
+  }
+  &:hover {
+    &:before {
+       width: 0;
+    }
+  }
+}
+
+//button styles
+.flex-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+
 }
 
 
@@ -100,8 +136,6 @@ $animal-bg: $Bear, $Duck, $Bunny, $Cat;
   // background-image: url(https://indiabright.com/wp-content/uploads/2015/12/Cute-Doll-Wallpapers-For-Facebook-Cover-Picture-12.jpg);
   background-color: red;
 }
-
-
 
 
 .flex-wrapper a:hover {
@@ -174,21 +208,27 @@ $animal-bg: $Bear, $Duck, $Bunny, $Cat;
 
 .dash-flex-wrapper {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+
+  .dash-btn {
+    order: 2;
+
+  }
 }
 
-.dash-flex-wrapper .dash-logo{
+ .dash-logo {
   display: flex;
-  align-items: flex-end;
-  position: absolute;
-  background-image: url(http://images.clipartpanda.com/stack-of-childrens-books-clip-art-book-drive-for-children-NewspaperGraphic.jpg);
+  order: 1;
+  background-image: url('680.png');
   background-size: contain;
   background-repeat: no-repeat;
-
-  height: 40vh;
-  width: 10vh;
-
+  height: 400px;
+  width: 400px;
 }
+
 
 .dash-flex-wrapper h4 {
   display: flex;

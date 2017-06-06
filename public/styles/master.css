@@ -1,10 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 .btn {
   color: white;
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 3px;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Roboto';
+  color: #f59221;
   font-size: 2em; }
 
 .btn-green {
@@ -39,12 +40,42 @@
   .btn-red:active {
     background: #921e12; }
 
+.btn-purple {
+  background: #8f2a8b; }
+  .btn-purple:hover {
+    background: #6f216c;
+    transition: all 0.3s ease; }
+  .btn-purple:active {
+    background: #2c0d2b; }
+
 body {
-  font: normal 18px/1.5 "Helvetica Neue", sans-serif;
-  background-color: gray;
+  font: normal 18px/1.5 "Roboto", sans-serif;
+  background-color: #ffce6b;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; }
+
+a {
+  color: #8f2a8b;
+  display: inline-block;
+  position: relative;
+  text-decoration: none; }
+  a:before {
+    background-color: #8f2a8b;
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    width: 100%; }
+  a:hover:before {
+    width: 0; }
+
+.flex-button-wrapper {
+  display: flex;
+  justify-content: flex-end; }
 
 .flex-wrapper {
   display: flex;
@@ -150,17 +181,21 @@ body {
     transform: none; } }
 .dash-flex-wrapper {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh; }
+  .dash-flex-wrapper .dash-btn {
+    order: 2; }
 
-.dash-flex-wrapper .dash-logo {
+.dash-logo {
   display: flex;
-  align-items: flex-end;
-  position: absolute;
-  background-image: url(http://images.clipartpanda.com/stack-of-childrens-books-clip-art-book-drive-for-children-NewspaperGraphic.jpg);
+  order: 1;
+  background-image: url("680.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 40vh;
-  width: 10vh; }
+  height: 400px;
+  width: 400px; }
 
 .dash-flex-wrapper h4 {
   display: flex;

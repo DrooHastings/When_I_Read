@@ -3,6 +3,7 @@ myApp.controller('ToyController', ['splitService', function(splitService){
   let vm = this;
 
   splitService.getToyWords();
+  vm.word = splitService.toysArray[splitService.counter];
 
   vm.toyLetters = splitService.letterObjectArray;
 
@@ -21,6 +22,8 @@ myApp.controller('ToyController', ['splitService', function(splitService){
     }
 
 };
+
+
 
 
 
