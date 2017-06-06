@@ -21,12 +21,22 @@
  font-size:2em;
 }
 
+.sm-btn {
+  color:white;
+  text-decoration:none;
+  padding:5px 10px;
+  border-radius:3px;
+  font-family: 'Roboto';
+  color: #f59221;
+  font-size:1em;
+}
+
 .btn-green {
-   @include button-bg(#2ecc71);
+   @include button-bg(#388268);
 }
 
 .btn-blue {
-   @include button-bg(#3498db);
+   @include button-bg(#2175b8);
 }
 
 .btn-yellow{
@@ -34,7 +44,7 @@
 }
 
 .btn-red {
-   @include button-bg(#e74c3c);
+   @include button-bg(#ec1944);
 }
 
 .btn-purple {
@@ -49,17 +59,24 @@ body {
   background-size: cover;
 }
 
+.small-logo {
+  height: 3.2em;
+  width: 6.1em;
+  margin-right: .5em;
+
+}
 // link styling
 $linkColor: #8f2a8b;
+$black: #87b440;
 a {
-  color: $linkColor;
+  color: $black;
   display: inline-block;
   position: relative;
   text-decoration: none;
   &:before {
-    background-color: $linkColor;
+    background-color: $black;
     content: '';
-    height: 2px;
+    height: 1px;
     position: absolute;
     bottom: -1px;
     left: 50%;
@@ -75,10 +92,23 @@ a {
 }
 
 //button styles
-.flex-button-wrapper {
+.flex-toy-wrapper {
+  height: 75px;
+  width: auto;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // border: 5px solid purple;
+  padding: 3px;
+  margin: 9px;
+}
 
+.toy-button-wrapper {
+
+}
+.toy-text-wrapper {
+  color: $linkColor
 }
 
 
