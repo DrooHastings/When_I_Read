@@ -19,10 +19,12 @@
  font-family: 'Roboto';
  color: #f59221;
  font-size:2em;
+ box-shadow: .5px .5px .5px #888888;
 }
 
 .sm-btn {
   color:white;
+  box-shadow: 1px 1px 1px #888888;
   text-decoration:none;
   padding:5px 10px;
   border-radius:3px;
@@ -64,10 +66,11 @@ body {
   width: 6.1em;
   margin-right: .5em;
 
+
 }
 // link styling
 $linkColor: #8f2a8b;
-$black: #87b440;
+$black: #ca1f57;
 a {
   color: $black;
   display: inline-block;
@@ -108,7 +111,8 @@ a {
 
 }
 .toy-text-wrapper {
-  color: $linkColor
+  color: $linkColor;
+    h4 { text-shadow: 20px 20px #0000;}
 }
 
 

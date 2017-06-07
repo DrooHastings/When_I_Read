@@ -38,10 +38,7 @@ app.use('/Animals', animalsRouter);
 app.use('/Sounds', soundsRouter);
 
 //split out into it's own module later
-app.get('/getToys', function(req, res){
 
-
-});
 
 
 //spin up server

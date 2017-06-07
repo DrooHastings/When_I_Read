@@ -6,10 +6,12 @@
   border-radius: 3px;
   font-family: 'Roboto';
   color: #f59221;
-  font-size: 2em; }
+  font-size: 2em;
+  box-shadow: .5px .5px .5px #888888; }
 
 .sm-btn {
   color: white;
+  box-shadow: 1px 1px 1px #888888;
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 3px;
@@ -70,12 +72,12 @@ body {
   margin-right: .5em; }
 
 a {
-  color: #87b440;
+  color: #ca1f57;
   display: inline-block;
   position: relative;
   text-decoration: none; }
   a:before {
-    background-color: #87b440;
+    background-color: #ca1f57;
     content: '';
     height: 1px;
     position: absolute;
@@ -99,6 +101,8 @@ a {
 
 .toy-text-wrapper {
   color: #8f2a8b; }
+  .toy-text-wrapper h4 {
+    text-shadow: 20px 20px #0000; }
 
 .flex-wrapper {
   display: flex;

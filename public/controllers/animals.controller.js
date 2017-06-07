@@ -3,10 +3,11 @@ myApp.controller('AnimalController', ['splitService', function(splitService){
   let vm = this;
 
   splitService.getAnimals();
-
+  vm.word = splitService.toysArray[splitService.counter];
   vm.toyLetters = splitService.letterObjectArray;
 
   vm.animalClick = function(){
+    vm.word = '';
     vm.toyLetters =[];
     console.log('Array at click!!!', vm.toyLetters);
     splitService.counter = splitService.counter +1;
@@ -19,5 +20,6 @@ myApp.controller('AnimalController', ['splitService', function(splitService){
       splitService.splitArray(splitService.toysArray[splitService.counter]);
       vm.toyLetters = splitService.letterObjectArray;
     }
+    vm.word = splitService.toysArray[splitService.counter];
   };
   }]);
