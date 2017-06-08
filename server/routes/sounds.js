@@ -23,16 +23,6 @@ router.post('/', function(req, res){
 });
 
 
-// for (var i = 0; i < arrayOfLetters.length; i++) {
-//  var letterObject = {
-//      letter: arrayOfLetters[i],
-//      sound: ' '
-//      };
-//      console.log('letterObject', letterObject);
-//      vm.letterObjectArray.push(letterObject);
-//    }//end for
-
-
 
 
 module.exports = router;

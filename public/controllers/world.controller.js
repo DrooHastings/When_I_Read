@@ -1,32 +1,12 @@
-myApp.controller('ToyController', ['splitService', function(splitService){
-  console.log('made it to the ToysController');
+myApp.controller('WorldController', ['splitService', function(splitService){
+  console.log('made it to the WorldController');
   let vm = this;
 
-
-vm.PlaySound = function(url){
-  console.log('in vm.PlaySound, soundobj', url);
-  var a = new Audio(url);
-  a.play();
-
-};
-
-StopSound = function(soundobj) {
-  console.log('in vm.StopSound');
-  var thissound=document.getElementById(soundobj);
-  thissound.pause();
-  thissound.currentTime = 0;
-
-};
-
-
-
-  splitService.getToyWords();
-
+  splitService.getWorld();
   vm.word = splitService.toysArray[splitService.counter];
-
   vm.toyLetters = splitService.letterObjectArray;
 
-  vm.toyClick = function(){
+  vm.worldClick = function(){
     vm.word = '';
     vm.toyLetters =[];
     console.log('Array at click!!!', vm.toyLetters);
@@ -41,11 +21,6 @@ StopSound = function(soundobj) {
       vm.toyLetters = splitService.letterObjectArray;
     }
     vm.word = splitService.toysArray[splitService.counter];
-};
+  };
 
-
-
-
-
-
-}]);
+  }]);

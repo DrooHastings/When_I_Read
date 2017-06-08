@@ -17,6 +17,10 @@ myApp.config(['$routeProvider', function($routeProvider){
       templateUrl:'views/partials/animals.html',
       controller: 'AnimalController as AC'
     })
+    .when('/world', {
+      templateUrl:'views/partials/world.html',
+      controller: 'WorldController as WC'
+    })
     .otherwise({
       redirectTo:'/'
     });

@@ -12,6 +12,7 @@ const indexRouter = require('./routes/index');
 const toysRouter = require('./routes/toys');
 const animalsRouter = require ('./routes/animals');
 const soundsRouter = require ('./routes/sounds');
+const worldRouter = require ('./routes/world');
 
 //bodyParser
 app.use(bodyParser.json());
@@ -36,8 +37,8 @@ app.use('/', indexRouter);
 app.use('/Toys', toysRouter);
 app.use('/Animals', animalsRouter);
 app.use('/Sounds', soundsRouter);
+app.use('/World', worldRouter);
 
-//split out into it's own module later
 
 
 

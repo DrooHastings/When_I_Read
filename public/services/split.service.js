@@ -69,6 +69,25 @@ vm.getAnimals = function(){
   // return vm.toysArray;
 };
 
+vm.getWorld = function(){
+  console.log('hit getWorld');
+  $http({
+    method: 'GET',
+    url: '/World'
+  }).then(function(response){
+    console.log('response.data', response.data[0]);
+    vm.responseObj = response.data[0];
+    console.log('vm.responseObj.words',vm.responseObj.words);
+    vm.toysArray = vm.responseObj.words;
+    console.log(vm.toysArray);
+    console.log('counter in get func', vm.counter);
+
+    vm.toysArray = vm.responseObj.words;
+    vm.splitArray(vm.toysArray[vm.counter]);
+  });
+  // return vm.toysArray;
+};
+
 
 
 

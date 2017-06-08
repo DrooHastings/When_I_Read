@@ -9,15 +9,13 @@
   </div>
 </div>
 
+
 <div class="flex-wrapper">
-   <a ng-repeat='array in TC.toyLetters' href="" class="one">
+   <a ng-repeat='array in TC.toyLetters' ng-mouseover="TC.PlaySound(array.sound)"
+   onmouseout="StopSound('mySound')"  href="" class="one">
     <div class="overlay">
-      <div class="overlay-inner">
-        <h2 class="animated infinite jello">{{array.letter}}</h2>
-          <audio controls>
-            <source src= '{{array.sound}}' type="audio/mpeg">
-          Your browser does not support the audio element.
-          </audio>
+       <div class="overlay-inner">
+         <h2 class="animated infinite jello">{{array.letter}}</h2>
       </div>
     </div>
   </a>
