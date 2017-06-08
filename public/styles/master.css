@@ -90,7 +90,7 @@ a {
     width: 0; }
 
 .flex-toy-wrapper {
-  height: 75px;
+  height: 85px;
   width: auto;
   display: flex;
   flex-direction: row-reverse;

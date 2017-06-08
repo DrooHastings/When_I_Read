@@ -12,7 +12,9 @@
   "dependencies": {
     "angular": "^1.6.4",
     "angular-route": "^1.6.4",
+    "animate": "^1.0.0",
     "body-parser": "^1.17.2",
+    "css": "^2.2.1",
     "mongoose": "^4.10.4"
   }
 }

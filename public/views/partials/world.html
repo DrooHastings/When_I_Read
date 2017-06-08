@@ -4,7 +4,7 @@
       <button ng-click='WC.worldClick()' type="button" class="btn btn-purple">PLAY!</button>
         </div>
       <div class="toy-text-wrapper">
-    <h4>The Word is: {{WC.word}}</h4>
+    <h4 class="animated bounceInUp">The Word is: {{WC.word}}</h4>
   </div>
 </div>
 <div class="flex-wrapper">
@@ -12,7 +12,7 @@
     ng-mouseleave="TC.StopSound(array.sound)">
       <div class="overlay">
           <div class="overlay-inner">
-        <h2 class="animated infinite jello">{{array.letter}}</h2>
+        <h2 class="animated infinite tada">{{array.letter}}</h2>
       </div>
     </div>
   </a>
