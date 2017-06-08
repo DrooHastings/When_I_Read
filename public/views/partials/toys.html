@@ -1,20 +1,18 @@
 
 <div class="flex-toy-wrapper">
   <img class="small-logo" src="/styles/680.png" alt="">
-  <div class="toy-button-wrapper">
-    <button ng-click='TC.toyClick()' type="button" class="btn btn-purple">PLAY!</button>
-  </div>
-  <div class="toy-text-wrapper">
+    <div class="toy-button-wrapper">
+      <button ng-click='TC.toyClick()' type="button" class="btn btn-purple">PLAY!</button>
+        </div>
+      <div class="toy-text-wrapper">
     <h4>The Word is: {{TC.word}}</h4>
-  </div>
 </div>
-
-
+</div>
 <div class="flex-wrapper">
    <a ng-repeat='array in TC.toyLetters' ng-mouseover="TC.PlaySound(array.sound)"
-   onmouseout="StopSound('mySound')"  href="" class="one">
-    <div class="overlay">
-       <div class="overlay-inner">
+      ng-mouseleave="TC.StopSound(array.sound)"  href="" class="one">
+        <div class="overlay">
+          <div class="overlay-inner">
          <h2 class="animated infinite jello">{{array.letter}}</h2>
       </div>
     </div>

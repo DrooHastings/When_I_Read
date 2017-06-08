@@ -63,9 +63,9 @@ body {
 }
 
 .small-logo {
-  height: 3.2em;
+  height: 3.6em;
   width: 6.1em;
-  margin-right: .5em;
+  margin: 0 0.5em 0 0;
 
 
 }
@@ -106,8 +106,14 @@ a {
   // border: 5px solid purple;
   padding: 3px;
   margin: 9px;
+
 }
 
+h4 {
+  text-shadow: .5px .5px .5px #888888;
+
+
+}
 .toy-button-wrapper {
 
 }
@@ -162,6 +168,19 @@ $animal-bg: $Bear, $Duck, $Bunny, $Cat;
   }
 }
 
+$Swing:url(https://images6.alphacoders.com/411/411449.jpg);
+$Family: url(http://2.bp.blogspot.com/-CjKnwzVd1Og/VWs5N0L4V4I/AAAAAAAAATk/fZp3kuSbQT8/s1600/FAMILIA1.jpg);
+$Bus: url(https://ak9.picdn.net/shutterstock/videos/13770053/thumb/1.jpg);
+$Lights: url(https://thebuzzmagazines.com/sites/default/files/events/2016/10/zoo%20lights%202016%20resized.jpg);
+$Earth: url(http://hdfreewallpaper.net/wp-content/uploads/2015/10/superb-3d-earth-hd-free-wallpapers-for-computers.jpg);
+
+$world-bg: $Swing, $Family, $Bus, $Lights, $Earth;
+
+@for $i from 1 through length($world-bg){
+  .three:nth-of-type(#{$i}) {
+    background-image: nth($world-bg, $i);
+  }
+}
 
 
 

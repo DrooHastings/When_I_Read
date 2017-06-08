@@ -67,9 +67,9 @@ body {
   background-size: cover; }
 
 .small-logo {
-  height: 3.2em;
+  height: 3.6em;
   width: 6.1em;
-  margin-right: .5em; }
+  margin: 0 0.5em 0 0; }
 
 a {
   color: #9a9383;
@@ -98,6 +98,9 @@ a {
   justify-content: space-between;
   padding: 3px;
   margin: 9px; }
+
+h4 {
+  text-shadow: .5px .5px .5px #888888; }
 
 .toy-text-wrapper {
   color: #8f2a8b; }
@@ -145,6 +148,21 @@ a {
 
 .two:nth-of-type(4) {
   background-image: url(http://i.dailymail.co.uk/i/pix/2012/02/06/article-2097359-119B5B45000005DC-1_634x897.jpg); }
+
+.three:nth-of-type(1) {
+  background-image: url(https://images6.alphacoders.com/411/411449.jpg); }
+
+.three:nth-of-type(2) {
+  background-image: url(http://2.bp.blogspot.com/-CjKnwzVd1Og/VWs5N0L4V4I/AAAAAAAAATk/fZp3kuSbQT8/s1600/FAMILIA1.jpg); }
+
+.three:nth-of-type(3) {
+  background-image: url(https://ak9.picdn.net/shutterstock/videos/13770053/thumb/1.jpg); }
+
+.three:nth-of-type(4) {
+  background-image: url(https://thebuzzmagazines.com/sites/default/files/events/2016/10/zoo%20lights%202016%20resized.jpg); }
+
+.three:nth-of-type(5) {
+  background-image: url(http://hdfreewallpaper.net/wp-content/uploads/2015/10/superb-3d-earth-hd-free-wallpapers-for-computers.jpg); }
 
 .flex-wrapper .one {
   background-color: red; }

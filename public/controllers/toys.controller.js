@@ -10,11 +10,11 @@ vm.PlaySound = function(url){
 
 };
 
-StopSound = function(soundobj) {
+vm.StopSound = function(url) {
   console.log('in vm.StopSound');
-  var thissound=document.getElementById(soundobj);
-  thissound.pause();
-  thissound.currentTime = 0;
+  var a = new Audio(url);
+  a.pause();
+  a.currentTime = 0;
 
 };
 

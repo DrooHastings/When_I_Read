@@ -1,23 +1,18 @@
 <div class="flex-toy-wrapper">
   <img class="small-logo" src="/styles/680.png" alt="">
-
-  <div class="toy-button-wrapper">
-    <button ng-click='WC.worldClick()' type="button" class="btn btn-purple">PLAY!</button>
-  </div>
-  <div class="toy-text-wrapper">
+    <div class="toy-button-wrapper">
+      <button ng-click='WC.worldClick()' type="button" class="btn btn-purple">PLAY!</button>
+        </div>
+      <div class="toy-text-wrapper">
     <h4>The Word is: {{WC.word}}</h4>
   </div>
 </div>
 <div class="flex-wrapper">
-   <a ng-repeat='array in WC.toyLetters' href="" class="two">
-
-     <div class="overlay">
-      <div class="overlay-inner">
+   <a ng-repeat='array in WC.toyLetters' href="" ng-mouseover="WC.PlaySound(array.sound)" class="three"
+    ng-mouseleave="TC.StopSound(array.sound)">
+      <div class="overlay">
+          <div class="overlay-inner">
         <h2 class="animated infinite jello">{{array.letter}}</h2>
-        <audio controls>
-          <source src= '{{array.sound}}' type="audio/mpeg">
-        Your browser does not support the audio element.
-        </audio>
       </div>
     </div>
   </a>
