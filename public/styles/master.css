@@ -242,6 +242,15 @@ h4 {
   height: 400px;
   width: 400px; }
 
+.dash-text {
+  color: #38ac48;
+  text-shadow: 0.5px 0.5px #888888; }
+
+.dash-input {
+  box-shadow: .5px .5px .5px #888888;
+  margin: 6px;
+  padding: 6px; }
+
 .dash-flex-wrapper h4 {
   display: flex;
   align-items: flex-end; }

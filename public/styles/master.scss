@@ -1,3 +1,6 @@
+$Green: #38ac48;
+$Gray: #888888;
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @mixin button-bg($bg) {
@@ -111,7 +114,7 @@ a {
 
 
 h4 {
-  
+
   text-shadow: .5px .5px .5px #888888;
 
 
@@ -286,8 +289,21 @@ $world-bg: $Swing, $Family, $Bus, $Lights, $Earth;
   background-repeat: no-repeat;
   height: 400px;
   width: 400px;
+
 }
 
+.dash-text {
+  color: $Green;
+  text-shadow: .5px .5px $Gray;
+
+}
+
+.dash-input {
+  box-shadow: .5px .5px .5px #888888;
+  margin: 6px;
+  padding: 6px;
+
+}
 
 .dash-flex-wrapper h4 {
   display: flex;
