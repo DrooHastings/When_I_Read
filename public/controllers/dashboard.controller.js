@@ -5,7 +5,7 @@ myApp.controller('DashboardController', function(){
   var B = 'http://www.pacdv.com/sounds/miscellaneous_sounds/dogs-barking-2.mp3';
   var source;
   vm.PlaySound = new Audio ();
-  // vm.PlaySound.src = source;
+
   vm.PlaySound.src = 'http://sfxcontent.s3.amazonaws.com/soundfx/Lion-Roar.mp3';
 
   // var audioElement = document.createElement('audio');

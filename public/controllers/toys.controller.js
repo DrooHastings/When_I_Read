@@ -1,7 +1,14 @@
 myApp.controller('ToyController', ['splitService', function(splitService){
   console.log('made it to the ToysController');
   let vm = this;
-  
+
+
+
+  vm.theSound = function (url){
+    console.log('reached theSound with url:', url);
+    vm.PlaySound = new Audio ();
+    vm.PlaySound.src = url;
+  };
 
   splitService.getToyWords();
 

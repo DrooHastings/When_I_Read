@@ -1,6 +1,8 @@
 
-var soundArray = ['soundA', 'soundB', 'soundC', 'soundD', 'soundE',
-'soundF', 'soundG', 'soundH', 'soundI', 'soundJ', 'soundK', 'soundL', 'soundM',
+var mp3Path = "vendors/When-I-Read-Audio/";
+
+var soundArray = [mp3Path + 'A.mp3', mp3Path + 'B.mp3', mp3Path + 'C.mp3', mp3Path + 'D.mp3', mp3Path + 'E.mp3',
+mp3Path + 'F.mp3', mp3Path + 'G.mp3', mp3Path + 'H.mp3', mp3Path + 'I.mp3', mp3Path + 'J.mp3', mp3Path + 'K.mp3', mp3Path + 'L.mp3', mp3Path + 'M.mp3',
 'soundN', 'soundO', 'soundP', 'soundQ', 'soundR', 'soundS', 'soundT', 'soundU',
 'soundV', 'soundW', 'soundX', 'soundY', 'soundZ'];
 

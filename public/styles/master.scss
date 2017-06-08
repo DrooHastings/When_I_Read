@@ -12,6 +12,7 @@
 }
 
 .btn {
+  // position: static;
  color:white;
  text-decoration:none;
  padding:5px 10px;
@@ -70,7 +71,7 @@ body {
 }
 // link styling
 $linkColor: #8f2a8b;
-$black: #ca1f57;
+$black: #9a9383;
 a {
   color: $black;
   display: inline-block;
@@ -79,7 +80,7 @@ a {
   &:before {
     background-color: $black;
     content: '';
-    height: 1px;
+    height: 2px;
     position: absolute;
     bottom: -1px;
     left: 50%;
@@ -122,6 +123,7 @@ a {
 }
 
 .flex-wrapper a {
+
   position: relative;
   flex: 1;
   text-align: center;
@@ -268,4 +270,15 @@ $animal-bg: $Bear, $Duck, $Bunny, $Cat;
   display: flex;
   align-items: flex-end;
 
+}
+
+audio:hover, audio:focus, audio:active
+{
+
+-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+transform: scale(1.05);
 }

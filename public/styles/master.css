@@ -72,14 +72,14 @@ body {
   margin-right: .5em; }
 
 a {
-  color: #ca1f57;
+  color: #9a9383;
   display: inline-block;
   position: relative;
   text-decoration: none; }
   a:before {
-    background-color: #ca1f57;
+    background-color: #9a9383;
     content: '';
-    height: 1px;
+    height: 2px;
     position: absolute;
     bottom: -1px;
     left: 50%;
@@ -227,5 +227,13 @@ a {
 .dash-flex-wrapper h4 {
   display: flex;
   align-items: flex-end; }
+
+audio:hover, audio:focus, audio:active {
+  -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  transform: scale(1.05); }
 
 /*# sourceMappingURL=master.css.map */

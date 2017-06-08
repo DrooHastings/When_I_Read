@@ -1,4 +1,6 @@
+
 <div class="flex-toy-wrapper">
+  <img class="small-logo" src="/styles/680.png" alt="">
   <div class="toy-button-wrapper">
     <button ng-click='TC.toyClick()' type="button" class="btn btn-purple">PLAY!</button>
   </div>
@@ -12,7 +14,10 @@
     <div class="overlay">
       <div class="overlay-inner">
         <h2 class="animated infinite jello">{{array.letter}}</h2>
-          <p>This will make a {{array.sound}} sound</p>
+          <audio controls>
+            <source src= '{{array.sound}}' type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
       </div>
     </div>
   </a>
