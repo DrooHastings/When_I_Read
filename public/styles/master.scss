@@ -1,5 +1,6 @@
 $Green: #38ac48;
 $Gray: #888888;
+$Orange: #e84e25;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -97,6 +98,31 @@ a {
     }
   }
 }
+
+.dash-text{
+  color: $Orange;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  &:before {
+    background-color: $Orange;
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    width: 100%;
+  }
+  &:hover {
+    &:before {
+       width: 0;
+    }
+  }
+}
+
+
 
 //button styles
 .flex-toy-wrapper {
@@ -268,6 +294,12 @@ $world-bg: $Swing, $Family, $Bus, $Lights, $Earth;
   }
 }
 
+.letter-text {
+  height: 10vh;
+  width: 7vh;
+
+}
+
 .dash-flex-wrapper {
   display: flex;
   flex-direction: column;
@@ -275,8 +307,8 @@ $world-bg: $Swing, $Family, $Bus, $Lights, $Earth;
   align-items: center;
   height: 100vh;
 
-  .dash-btn {
-    order: 2;
+  .dash-button {
+    order: 3;
 
   }
 }
@@ -289,18 +321,23 @@ $world-bg: $Swing, $Family, $Bus, $Lights, $Earth;
   background-repeat: no-repeat;
   height: 400px;
   width: 400px;
+  padding: 10px;
+  margin-top: 15px;
 
 }
 
 .dash-text {
+  order: 0;
   color: $Green;
   text-shadow: .5px .5px $Gray;
 
 }
 
 .dash-input {
+  order: 2;
   box-shadow: .5px .5px .5px #888888;
-  margin: 6px;
+  margin-bott: 6px;
+  margin: 0 0 6px 0;
   padding: 6px;
 
 }
@@ -311,13 +348,13 @@ $world-bg: $Swing, $Family, $Bus, $Lights, $Earth;
 
 }
 
-audio:hover, audio:focus, audio:active
-{
-
--webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--webkit-transform: scale(1.05);
--moz-transform: scale(1.05);
-transform: scale(1.05);
-}
+// audio:hover, audio:focus, audio:active
+// {
+//
+// -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+// -moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+// box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+// -webkit-transform: scale(1.05);
+// -moz-transform: scale(1.05);
+// transform: scale(1.05);
+// }

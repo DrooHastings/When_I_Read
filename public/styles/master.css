@@ -89,6 +89,24 @@ a {
   a:hover:before {
     width: 0; }
 
+.dash-text {
+  color: #e84e25;
+  display: inline-block;
+  position: relative;
+  text-decoration: none; }
+  .dash-text:before {
+    background-color: #e84e25;
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    width: 100%; }
+  .dash-text:hover:before {
+    width: 0; }
+
 .flex-toy-wrapper {
   height: 85px;
   width: auto;
@@ -224,14 +242,18 @@ h4 {
     opacity: 1;
     visibility: visible;
     transform: none; } }
+.letter-text {
+  height: 10vh;
+  width: 7vh; }
+
 .dash-flex-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh; }
-  .dash-flex-wrapper .dash-btn {
-    order: 2; }
+  .dash-flex-wrapper .dash-button {
+    order: 3; }
 
 .dash-logo {
   display: flex;
@@ -240,27 +262,24 @@ h4 {
   background-size: contain;
   background-repeat: no-repeat;
   height: 400px;
-  width: 400px; }
+  width: 400px;
+  padding: 10px;
+  margin-top: 15px; }
 
 .dash-text {
+  order: 0;
   color: #38ac48;
   text-shadow: 0.5px 0.5px #888888; }
 
 .dash-input {
+  order: 2;
   box-shadow: .5px .5px .5px #888888;
-  margin: 6px;
+  margin-bott: 6px;
+  margin: 0 0 6px 0;
   padding: 6px; }
 
 .dash-flex-wrapper h4 {
   display: flex;
   align-items: flex-end; }
-
-audio:hover, audio:focus, audio:active {
-  -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  transform: scale(1.05); }
 
 /*# sourceMappingURL=master.css.map */
