@@ -253,7 +253,8 @@ h4 {
   align-items: center;
   height: 100vh; }
   .dash-flex-wrapper .dash-button {
-    order: 3; }
+    order: 3;
+    margin-top: 14px; }
 
 .dash-logo {
   display: flex;

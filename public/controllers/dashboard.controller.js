@@ -1,24 +1,20 @@
-myApp.controller('DashboardController', function(){
+myApp.controller('DashboardController',['$http', function($http){
   console.log('made it to the DashboardController');
   let vm = this;
-  var A = 'http://sfxcontent.s3.amazonaws.com/soundfx/Lion-Roar.mp3';
-  var B = 'http://www.pacdv.com/sounds/miscellaneous_sounds/dogs-barking-2.mp3';
-  var source;
-  vm.PlaySound = new Audio ();
 
-  vm.PlaySound.src = 'http://sfxcontent.s3.amazonaws.com/soundfx/Lion-Roar.mp3';
-
-  // var audioElement = document.createElement('audio');
-  // audioElement.setAttribute('src', path);
-  // audioElement.play();
-
-  vm.soundArray = [];
-
-  var lionRoarSound = new Audio();
-  lionRoarSound.src = 'http://sfxcontent.s3.amazonaws.com/soundfx/Lion-Roar.mp3';
-
-  vm.soundArray.push(lionRoarSound);
+  vm.addWord = function(){
+    console.log('Word in:', vm.wordIn);
+    var wordToSend = {data: vm.wordIn.toUpperCase()};
 
 
+    $http ({
+          method: 'POST',
+          url: '/World',
+          data: wordToSend
+        }).then(function(response){
+          console.log('this is response', response);
+        });
+        vm.wordIn = '';
+  };
 
-});
+}]);
