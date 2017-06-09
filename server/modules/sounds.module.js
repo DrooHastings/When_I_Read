@@ -3,8 +3,8 @@ var mp3Path = "vendors/When-I-Read-Audio/";
 
 var soundArray = [mp3Path + 'A.mp3', mp3Path + 'B.mp3', mp3Path + 'C.mp3', mp3Path + 'D.mp3', mp3Path + 'E.mp3',
 mp3Path + 'F.mp3', mp3Path + 'G.mp3', mp3Path + 'H.mp3', mp3Path + 'I.mp3', mp3Path + 'J.mp3', mp3Path + 'K.mp3', mp3Path + 'L.mp3', mp3Path + 'M.mp3',
-'soundN', 'soundO', 'soundP', 'soundQ', 'soundR', 'soundS', 'soundT', 'soundU',
-'soundV', 'soundW', 'soundX', 'soundY', 'soundZ'];
+mp3Path + 'N.mp3',mp3Path + 'O.mp3', mp3Path + 'P.mp3', mp3Path + 'Q.mp3', mp3Path + 'R.mp3', mp3Path + 'S.mp3', mp3Path + 'T.mp3', mp3Path + 'U.mp3',
+mp3Path + 'V.mp3', mp3Path + 'W.mp3', mp3Path + 'X.mp3', mp3Path + 'Y.mp3', mp3Path + 'Z.mp3'];
 
 
 
