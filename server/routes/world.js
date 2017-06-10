@@ -13,7 +13,6 @@ router.get('/', function (req, res){
       let wordArrayObject = data[i];
       wordArray.push(wordArrayObject.word);
     }
-
     console.log('wordsArray after loop', wordArray);
 
     res.send(data);

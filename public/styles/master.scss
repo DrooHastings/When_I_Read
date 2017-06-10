@@ -1,6 +1,7 @@
 $Green: #38ac48;
 $Gray: #888888;
 $Orange: #e84e25;
+$Purple: #8f2a8b;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -339,9 +340,18 @@ $world-bg: $Swing, $Family, $Bus, $Lights, $Earth;
   box-shadow: .5px .5px .5px #888888;
   margin-bott: 6px;
   margin: 0 0 6px 0;
-  padding: 6px;
+  // padding: 6px;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
 
 }
+.dash-input:focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 5px $Purple;
+  outline: none;
+}
+
 
 .dash-flex-wrapper h4 {
   display: flex;
