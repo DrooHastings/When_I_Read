@@ -4,7 +4,9 @@ myApp.controller('DashboardController',['$http', function($http){
 
   vm.addWord = function(){
     console.log('Word in:', vm.wordIn);
-    var wordToSend = {data: vm.wordIn.toUpperCase()};
+    vm.wordIn = vm.wordIn.toUpperCase();
+    console.log('vm.wordIn', vm.wordIn);
+    var wordToSend = {word: vm.wordIn};
 
 
     $http ({

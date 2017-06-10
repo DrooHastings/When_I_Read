@@ -21,9 +21,12 @@ router.get('/', function (req, res){
 });
 
 router.post('/', function (req, res){
-  console.log('hit the add word post with:', req.body.data);
+  console.log('hit the add word post with:', req.body.word);
+  let objectString = String(req.body.word);
+  console.log('this is objectString', objectString);
+
   let newWord = {
-    words: [req.body.data]
+    word: objectString
   };
   newWord = new Worlds(newWord);
   newWord.save(function(err){

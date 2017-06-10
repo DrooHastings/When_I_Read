@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 
 //this needs to be fixed.  only an array should be in the DB
 const ToysSchema = new Schema({
-  letter: String,
-  sound: String
+  word: String,
+  
 });
 
 

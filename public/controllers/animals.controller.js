@@ -19,21 +19,21 @@ myApp.controller('AnimalController', ['splitService', function(splitService){
 
   splitService.getAnimals();
   vm.word = splitService.toysArray[splitService.counter];
-  vm.toyLetters = splitService.letterObjectArray;
+  vm.animalLetters = splitService.letterObjectArray;
 
   vm.animalClick = function(){
     vm.word = '';
-    vm.toyLetters =[];
-    console.log('Array at click!!!', vm.toyLetters);
+    vm.animalLetters =[];
+    console.log('Array at click!!!', vm.animalLetters);
     splitService.counter = splitService.counter +1;
     if (splitService.counter < splitService.toysArray.length) {
       console.log('LESS THAN');
       splitService.splitArray(splitService.toysArray[splitService.counter]);
-      vm.toyLetters = splitService.letterObjectArray;
+      vm.animalLetters = splitService.letterObjectArray;
     } else {
       splitService.counter = 0;
       splitService.splitArray(splitService.toysArray[splitService.counter]);
-      vm.toyLetters = splitService.letterObjectArray;
+      vm.animalLetters = splitService.letterObjectArray;
     }
     vm.word = splitService.toysArray[splitService.counter];
   };

@@ -19,21 +19,22 @@ myApp.controller('WorldController', ['splitService', function(splitService){
 
   splitService.getWorld();
   vm.word = splitService.toysArray[splitService.counter];
-  vm.toyLetters = splitService.letterObjectArray;
+  vm.worldLetters = splitService.letterObjectArray;
 
   vm.worldClick = function(){
     vm.word = '';
-    vm.toyLetters =[];
-    console.log('Array at click!!!', vm.toyLetters);
+    vm.worldLetters =[];
+    console.log('Array at click!!!', vm.worldLetters);
+    console.log('splitService array', splitService.letterObjectArray);
     splitService.counter = splitService.counter +1;
     if (splitService.counter < splitService.toysArray.length) {
       console.log('LESS THAN');
       splitService.splitArray(splitService.toysArray[splitService.counter]);
-      vm.toyLetters = splitService.letterObjectArray;
+      vm.worldLetters = splitService.letterObjectArray;
     } else {
       splitService.counter = 0;
       splitService.splitArray(splitService.toysArray[splitService.counter]);
-      vm.toyLetters = splitService.letterObjectArray;
+      vm.worldLetters = splitService.letterObjectArray;
     }
     vm.word = splitService.toysArray[splitService.counter];
   };
