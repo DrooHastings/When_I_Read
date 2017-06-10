@@ -16,7 +16,7 @@ myApp.controller('WorldController', ['splitService', function(splitService){
     a.currentTime = 0;
 
   };
-  
+
   splitService.getWorld();
   vm.word = splitService.toysArray[splitService.counter];
   vm.toyLetters = splitService.letterObjectArray;

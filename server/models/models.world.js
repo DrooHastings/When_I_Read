@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 
 const WorldsSchema = new Schema({
-  words: Array
+  word: String
 });
 
 

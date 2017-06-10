@@ -6,8 +6,16 @@ let router = express.Router();
 
 router.get('/', function (req, res){
   console.log('hit world route on server');
+  let wordArray = [];
   Worlds.find().then(function(data){
-    console.log('this is data', data);
+    console.log('data before loop', data);
+    for (var i = 0; i < data.length; i++) {
+      let wordArrayObject = data[i];
+      wordArray.push(wordArrayObject.word);
+    }
+
+    console.log('wordsArray after loop', wordArray);
+
     res.send(data);
   });
 });
@@ -26,7 +34,7 @@ router.post('/', function (req, res){
       console.log('new word successful!');
       res.sendStatus(201);
     }
-  })
+  });
 });
 
 

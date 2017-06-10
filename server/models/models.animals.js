@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 //can you use array as datatype?
 const AnimalsSchema = new Schema({
-  words: Array
+  word: String
 });
 
 
