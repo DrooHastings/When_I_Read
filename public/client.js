@@ -23,5 +23,5 @@ myApp.config(['$routeProvider', function($routeProvider){
     })
     .otherwise({
       redirectTo:'/'
-    });
-}]);
+    });//end config
+}]);//end module

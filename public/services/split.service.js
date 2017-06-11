@@ -8,6 +8,7 @@ myApp.service('splitService',['$http', function ($http){
 
 
   //splits words into letters
+  //sends letters to server to attach sounds
 vm.splitArray = function(word){
   vm.letterObjectArray =[];
   var arrayOfLetters = word.split('');
@@ -20,10 +21,9 @@ vm.splitArray = function(word){
     for (var i = 0; i < response.data.length; i++) {
       var letterObject = response.data[i];
       vm.letterObjectArray.push(letterObject);
-    }
-
+      }
     });
-  };
+  };//end split function
 
 //gets toy words - should be refactored for DRY use id and type
 vm.getToyWords = function(){
@@ -38,8 +38,7 @@ vm.getToyWords = function(){
     }
       vm.splitArray(vm.toysArray[vm.counter]);
   });
-
-  };
+};//end toys get
 
   //gets animal words - should be refactored for DRY use id and type
 vm.getAnimals = function(){
@@ -54,10 +53,9 @@ vm.getAnimals = function(){
     }
       vm.splitArray(vm.toysArray[vm.counter]);
   });
+};//end animals get
 
-  };
-
-  //gets tmy world words - should be refactored for DRY use id and type
+  //gets my world words - should be refactored for DRY use id and type
 vm.getWorld = function(){
   vm.toysArray = [];
   $http({
@@ -71,5 +69,5 @@ vm.getWorld = function(){
     }
       vm.splitArray(vm.toysArray[vm.counter]);
   });
-};
-}]);
+};// end world get
+}]);//end of service

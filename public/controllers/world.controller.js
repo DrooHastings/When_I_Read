@@ -16,11 +16,13 @@ myApp.controller('WorldController', ['splitService', function(splitService){
 
   };
 
+  //populates the array and sets controller array = service array
+  //set word displayed equal to the current word being ng-repeated
   splitService.getWorld();
   vm.word = splitService.toysArray[splitService.counter];
   vm.worldLetters = splitService.letterObjectArray;
 
-  //get words
+  //gets words on button click at counter index
   vm.worldClick = function(){
     vm.word = '';
     vm.worldLetters =[];
@@ -34,6 +36,5 @@ myApp.controller('WorldController', ['splitService', function(splitService){
       vm.worldLetters = splitService.letterObjectArray;
     }
     vm.word = splitService.toysArray[splitService.counter];
-  };
-
-  }]);
+  };//end click
+}]);//end controller

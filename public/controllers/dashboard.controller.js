@@ -12,6 +12,5 @@ myApp.controller('DashboardController',['$http', function($http){
         }).then(function(response){
         });
         vm.wordIn = '';
-  };
-
-}]);
+  };//end addWord
+}]);//end of controller

@@ -3,9 +3,8 @@ const path = require ('path');
 let router = express.Router();
 var soundAssigner = require ('../modules/sounds.module.js');
 
-
+//add word to DB
 router.post('/', function(req, res){
-  console.log('req.body',req.body);
   var arrayOfLetters = req.body;
   var letterObjectArray = [];
   for (var i = 0; i < arrayOfLetters.length; i++) {
@@ -13,16 +12,10 @@ router.post('/', function(req, res){
       letter: arrayOfLetters[i],
       sound: ' '
       };
-      console.log('letterObject', letterObject);
       soundAssigner(letterObject);
-      console.log('letterObject after switch', letterObject);
       letterObjectArray.push(letterObject);
      }//end for
      res.send(letterObjectArray);
-
-});
-
-
-
+});//end post
 
 module.exports = router;

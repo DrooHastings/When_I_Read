@@ -1,13 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-
-//this needs to be fixed.  only an array should be in the DB
 const ToysSchema = new Schema({
   word: String,
-  
 });
-
 
 const Toys = mongoose.model('Toys', ToysSchema);
 

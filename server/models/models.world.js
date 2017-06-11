@@ -6,7 +6,6 @@ const WorldsSchema = new Schema({
   word: String
 });
 
-
 const Worlds = mongoose.model('Worlds', WorldsSchema);
 
 module.exports = Worlds;

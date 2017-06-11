@@ -14,12 +14,13 @@ vm.StopSound = function(url) {
   a.currentTime = 0;
 };
 
-  //get words on page load
+//populates the array and sets controller array = service array
+//set word displayed equal to the current word being ng-repeated
   splitService.getToyWords();
   vm.word = splitService.toysArray[splitService.counter];
   vm.toyLetters = splitService.letterObjectArray;
 
-  //button click
+  //button click - grabs current words at counter index
   vm.toyClick = function(){
     vm.word = '';
     vm.toyLetters =[];
@@ -33,5 +34,5 @@ vm.StopSound = function(url) {
       vm.toyLetters = splitService.letterObjectArray;
     }
     vm.word = splitService.toysArray[splitService.counter];
-};
-}]);
+};//end click function
+}]);//end of controller

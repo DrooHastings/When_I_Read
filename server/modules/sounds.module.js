@@ -1,4 +1,4 @@
-
+//global path
 var mp3Path = "vendors/When-I-Read-Audio/";
 
 var soundArray = [mp3Path + 'A.mp3', mp3Path + 'B.mp3', mp3Path + 'C.mp3', mp3Path + 'D.mp3', mp3Path + 'E.mp3',
@@ -6,9 +6,8 @@ mp3Path + 'F.mp3', mp3Path + 'G.mp3', mp3Path + 'H.mp3', mp3Path + 'I.mp3', mp3P
 mp3Path + 'N.mp3',mp3Path + 'O.mp3', mp3Path + 'P.mp3', mp3Path + 'Q.mp3', mp3Path + 'R.mp3', mp3Path + 'S.mp3', mp3Path + 'T.mp3', mp3Path + 'U.mp3',
 mp3Path + 'V.mp3', mp3Path + 'W.mp3', mp3Path + 'X.mp3', mp3Path + 'Y.mp3', mp3Path + 'Z.mp3'];
 
-
-
-   function soundAssigner(object){
+//assigns sound key and value
+function soundAssigner(object){
      console.log('object.letter', object.letter);
     switch (object.letter.toUpperCase()) {
       case 'A': object.sound = soundArray[0];
@@ -63,12 +62,9 @@ mp3Path + 'V.mp3', mp3Path + 'W.mp3', mp3Path + 'X.mp3', mp3Path + 'Y.mp3', mp3P
       break;
       case 'Z': object.sound = soundArray[25];
       break;
-
       default:
-
     }
     return object;
-
-  }
+  }//end soundAssigner
 
   module.exports = soundAssigner;

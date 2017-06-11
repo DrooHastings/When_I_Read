@@ -4,7 +4,6 @@ const bodyParser = require ('body-parser');
 const path = require ('path');
 const mongoose = require ('mongoose');
 const port = process.env.PORT || 5000;
-
 let app = express ();
 
 //Routing Modules here (pre-auth)
@@ -27,7 +26,8 @@ mongoose.connection.on('error', function(){
   console.log('Not connected to DB');
 });
 
-mongoose.set('debug', true)
+//debug
+mongoose.set('debug', true);
 
 //static files
 app.use(express.static('public'));
@@ -38,9 +38,6 @@ app.use('/Toys', toysRouter);
 app.use('/Animals', animalsRouter);
 app.use('/Sounds', soundsRouter);
 app.use('/World', worldRouter);
-
-
-
 
 //spin up server
 app.listen(port, function() {

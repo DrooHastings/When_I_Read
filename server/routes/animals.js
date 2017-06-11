@@ -4,11 +4,10 @@ const path = require ('path');
 let router = express.Router();
 
 
-
+//get Animal words from DB
 router.get('/', function (req, res){
   console.log('hit animals route on server');
   Animals.find().then(function(data){
-    console.log('this is data', data);
     res.send(data);
   });
 });
