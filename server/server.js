@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require ('body-parser');
 const path = require ('path');
 const mongoose = require ('mongoose');
-const port = process.env.PORT || 5000;
+var port = process.env.PORT || 5000;
 let app = express ();
 
 //Routing Modules here (pre-auth)
@@ -40,6 +40,6 @@ app.use('/Sounds', soundsRouter);
 app.use('/World', worldRouter);
 
 //spin up server
-app.listen(port, function() {
+app.listen(port, function(req, res) {
   console.log('up and listening on', port);
 });
