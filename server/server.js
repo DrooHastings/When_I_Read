@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 //db connect
-mongoose.connect('mongodb://localhost:27017/whenIread-db');
+mongoose.connect('mongodb://heroku_p5pbgnrv:7cfs37trrcql86nipp1rj8hkis@ds135252.mlab.com:35252/heroku_p5pbgnrv');
 mongoose.connection.on('connected', function(){
   console.log('Connected to the DB');
 });
